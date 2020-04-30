@@ -23,6 +23,7 @@ var flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflower
 
 // below function not complete. need to look at query url formatting and get gifs to dispaly
 function displayFlowerGifs() {
+    // $("button").on("click", function () {
 
     var flower = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&q=flower&limit=10&offset=0&rating=G&lang=en";
@@ -30,10 +31,38 @@ function displayFlowerGifs() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
-        console.log(response);
-    });
-}
+
+    })
+
+        .then(function (response) {
+            console.log(response);
+            var results = response.data;
+
+            // Looping through each result item
+            for (var i = 0; i < results.length; i++) {
+
+                // Creating and storing a div tag
+                var flowerDiv = $("<div>");
+
+                // Creating a paragraph tag with the result item's rating
+                var p = $("<p>").text("Rating: " + results[i].rating);
+
+                // Creating and storing an image tag
+                var flowerImage = $("<img>");
+                // Setting the src attribute of the image to a property pulled off the result item
+                flowerImage.attr("src", results[i].images.fixed_height.url);
+
+                // Appending the paragraph and image tag to the animalDiv
+                flowerDiv.append(p);
+                flowerDiv.append(flowerImage);
+
+                //displaying gifs
+                $("#gifs-view").prepend(flowerDiv);
+            }
+
+        });
+};
+
 displayFlowerGifs()
 
 // Function for displaying flower array data as buttons
@@ -56,8 +85,5 @@ $("#add-flower").on("click", function (event) {
     flowers.push(flower);
     displayButtons();
 });
-
-
-
 
 displayButtons();
