@@ -21,6 +21,21 @@ let APIKEY = "AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
 //this is an array of flowers
 var flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflowers", "Tulips", "Peonies"];
 
+// below function not complete. need to look at query url formatting and get gifs to dispaly
+function displayFlowerGifs() {
+
+    var flower = $(this).attr("data-name");
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&q=flower&limit=10&offset=0&rating=G&lang=en";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+    });
+}
+displayFlowerGifs()
+
 // Function for displaying flower array data as buttons
 function displayButtons() {
     $("#buttons-view").empty();
@@ -41,6 +56,8 @@ $("#add-flower").on("click", function (event) {
     flowers.push(flower);
     displayButtons();
 });
+
+
 
 
 displayButtons();
