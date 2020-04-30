@@ -18,50 +18,64 @@
 // this is my personal giphy api key
 let APIKEY = "AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
 
-//this is an array of exercises
-let flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflowers", "Tulips", "Peonies"]
+//this is an array of flowers
+var flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflowers", "Tulips", "Peonies"];
 
-
-function alertFlowerName() {
-    var flowerName = $(this).attr("data-name");
-
-    alert(flowerName);
-}
-
+// Function for displaying movie data
 function renderButtons() {
-
-    // Deleting the movies prior to adding new movies
-    // (this is necessary otherwise we will have repeat buttons)
     $("#buttons-view").empty();
+    // Delete the content inside the buttons-view div prior 
 
-    // Looping through the array of movies
+    // Loop through the array of flowers, then generate buttons for each movie in the array
     for (var i = 0; i < flowers.length; i++) {
-
-        // Then dynamicaly generating buttons for each movie in the array
-        // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
         var a = $("<button>");
-        // Adding a class of movie to our button
         a.addClass("flower");
-        // Adding a data-attribute
         a.attr("data-name", flowers[i]);
-        // Providing the initial button text
         a.text(flowers[i]);
-        // Adding the button to the HTML
         $("#buttons-view").append(a);
     }
 }
+renderButtons();
+// function alertFlowerName() {
+//     var flowerName = $(this).attr("data-name");
+
+//     alert(flowerName);
+// }
+
+// function renderButtons() {
+
+//     // Deleting the movies prior to adding new movies
+//     // (this is necessary otherwise we will have repeat buttons)
+//     $("#buttons-view").empty();
+
+//     // Looping through the array of movies
+//     for (var i = 0; i < flowers.length; i++) {
+
+//         // Then dynamicaly generating buttons for each movie in the array
+//         // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
+//         var a = $("<button>");
+//         // Adding a class of movie to our button
+//         a.addClass("flower");
+//         // Adding a data-attribute
+//         a.attr("data-name", flowers[i]);
+//         // Providing the initial button text
+//         a.text(flowers[i]);
+//         // Adding the button to the HTML
+//         $("#buttons-view").append(a);
+//     }
+// }
 
 
-// function displayGif() {
+// // function displayGif() {
 
 
-//     var exercise = $(this).attr("data-name");
-//     // Example queryURL for Giphy API
-//     var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
+// //     var exercise = $(this).attr("data-name");
+// //     // Example queryURL for Giphy API
+// //     var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
 
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function (response) {
-//         console.log(response);
-//     });
+// //     $.ajax({
+// //         url: queryURL,
+// //         method: "GET"
+// //     }).then(function (response) {
+// //         console.log(response);
+// //     });
