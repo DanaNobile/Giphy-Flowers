@@ -3,28 +3,24 @@
 // Create a for loop of flowers
 // Push flowers into buttons on page
 
-// Add GIPHY API Key
-// Get response of key
-// Create event listener for buttons
-// Have buttons link to GIPHY search
-// Have GIPHY search resuts appear on screen
 
 // Create search box
 // Connect search box to GIPHY search
 // Have searches create new buttons and stay on screen
 
 
+// Add GIPHY API Key
+// Get response of key
+// Create event listener for buttons
+// Have buttons link to GIPHY search
+// Have GIPHY search resuts appear on screen
+
 
 // this is my personal giphy api key
 let APIKEY = "AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
 
 //this is an array of flowers
-var flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflowers", "Tulips", "Peonies"];
-
-
-
-
-
+var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 
 // below function not complete. need to look at query url formatting and get gifs to dispaly differently for each click- somehow work in on click event
 
@@ -39,7 +35,6 @@ function displayFlowerGifs() {
         method: "GET"
 
     })
-
         .then(function (response) {
             console.log(response);
             var results = response.data;
@@ -56,20 +51,39 @@ function displayFlowerGifs() {
                 // Creating and storing an image tag
                 var flowerImage = $("<img>");
                 // Setting the src attribute of the image to a property pulled off the result item
-                flowerImage.attr("src", results[i].images.fixed_height.url);
 
-                // Appending the paragraph and image tag to the animalDiv
+                // this pulls an animated gif:
+                // flowerGif.attr("src", results[i].images.fixed_height.url);
+
+                // this pulls a still image:
+                flowerImage.attr("src", results[i].images.original_still.url);
+
+                // Appending the paragraph and image tag to the flower Div
                 flowerDiv.append(p);
                 flowerDiv.append(flowerImage);
 
+
                 //displaying gifs
                 $("#gifs-view").prepend(flowerDiv);
+
+
+
+
             }
+
+
+
 
         });
 };
 
-displayFlowerGifs()
+
+// function playGif() {
+//     $("<img>").on("click")
+//     // let flowerImage = ("src", results[i].images.fixed_height.url)
+//     // flowerImage.attr("src", results[i].images.fixed_height.url);
+//     console.log("clicked");
+// }
 
 
 
@@ -95,8 +109,9 @@ $("#add-flower").on("click", function (event) {
     displayButtons();
 });
 
-
+// This function adds event listener to click and displays gifs pertaining to button clicked
 $(document).on("click", ".flower-btn", displayFlowerGifs);
+// $(document).on("click", "img", playGif);
 
 
 displayButtons();
