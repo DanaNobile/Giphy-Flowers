@@ -21,12 +21,18 @@ let APIKEY = "AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
 //this is an array of flowers
 var flowers = ["Roses", "Lillies", "Gardenias", "Daisies", "Orchids", "Sunflowers", "Tulips", "Peonies"];
 
-// below function not complete. need to look at query url formatting and get gifs to dispaly
+
+
+
+
+
+// below function not complete. need to look at query url formatting and get gifs to dispaly differently for each click- somehow work in on click event
+
 function displayFlowerGifs() {
     // $("button").on("click", function () {
 
     var flower = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&q=flower&limit=10&offset=0&rating=G&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&limit=10&offset=0&rating=G&lang=en";
 
     $.ajax({
         url: queryURL,
@@ -65,17 +71,20 @@ function displayFlowerGifs() {
 
 displayFlowerGifs()
 
+
+
 // Function for displaying flower array data as buttons
 function displayButtons() {
     $("#buttons-view").empty();
     for (var i = 0; i < flowers.length; i++) {
         var a = $("<button>");
-        a.addClass("flower");
+        a.addClass("flower-btn");
         a.attr("data-name", flowers[i]);
         a.text(flowers[i]);
         $("#buttons-view").append(a);
     }
 }
+
 
 // This function takes the input value and adds it to the existing array of flowers
 
@@ -85,5 +94,9 @@ $("#add-flower").on("click", function (event) {
     flowers.push(flower);
     displayButtons();
 });
+
+
+$(document).on("click", ".flower-btn", displayFlowerGifs);
+
 
 displayButtons();
