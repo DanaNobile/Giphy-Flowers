@@ -1,17 +1,37 @@
 body, html {
     height: 100%;
-    /* background-image: url("/assets/images/grass2jpg.jpg"); */
+    /* background-image:  url("/assets/images/grass2jpg.jpg"); */
 } 
 
+h2{
+    font-family: 'Sofia';font-size: 50px;
+
+}
 
 label{
-    font-family: 'Bad Script';font-size: 25px;
+    font-family: 'Sofia';font-size: 25px;
     margin-top: 25px;
-    color: 145, 22, 22;
-    font-size: 30px;
+    color: rgb(145, 22, 22);
+    font-size: 40px;
 } 
 
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
 
+#flower-input{
+    border: 2px solid rgb(145, 22, 22);
+}
+
+#add-flower{
+    background: rgb(145, 22, 22);
+    font-family: 'Bad Script';
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
 .flower-btn{
     background-color: rgb(145, 22, 22);
     margin-right: 25px;
@@ -31,10 +51,9 @@ label{
 }
 
 .container{
-    height: 100px;
-    /* display: flexbox;
-    flex-wrap: wrap;
-    flex-direction: row; */
+    margin-left: 3%;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 
@@ -44,7 +63,7 @@ label{
     background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/poppyfield.jpg");
   
     /* Set a specific height */
-    height: 40%;
+    height: 30%;
     
   
     /* Position and center the image to scale nicely on all screens */
@@ -66,8 +85,12 @@ label{
   }
 
   #gifs-view{
-     
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    max-width: fit-content;
+    max-height: fit-content;
+    justify-content: space-between;
   }
+
+  

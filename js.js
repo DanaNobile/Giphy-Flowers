@@ -25,6 +25,7 @@ var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 // below function not complete. need to look at query url formatting and get gifs to dispaly differently for each click- somehow work in on click event
 
 function displayFlowerGifs() {
+    $("#gifs-view").empty();
     // $("button").on("click", function () {
 
     var flower = $(this).attr("data-name");
@@ -116,6 +117,7 @@ function displayButtons() {
 
 $("#add-flower").on("click", function (event) {
     event.preventDefault();
+
     var flower = $("#flower-input").val().trim();
     flowers.push(flower);
     displayButtons();
