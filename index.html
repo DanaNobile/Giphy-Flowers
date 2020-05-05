@@ -12,31 +12,49 @@
     <!-- jquery  -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <!-- google font  -->
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <!-- google font 2  -->
+    <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+
     <!-- css  -->
     <link rel="stylesheet" href="assets/style.css">
     <title>Giphy Flower Search</title>
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="header"> -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Let's Pick Some Giphy Flowers!</h1>
+        </div>
+    </div>
 
-        <h1>Let's Pick Some Flowers!</h1>
+    <!-- </div> -->
 
-        <!-- Busttons get displayed here  -->
-        <div id="buttons-view"></div>
+    <div class="giphy">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Busttons get displayed here  -->
+                <div id="buttons-view"></div>
+            </div>
+        </div>
+    </div>
 
 
-        <form id="form">
-            <label for="flower-input"> Add a flower:</label>
-            <br>
-            <input type="text" id="flower-input">
-            <br>
 
-            <input id="add-flower" type="submit" value="Submit">
-        </form>
+    <form id="form">
+        <label for="flower-input"> Enter Your Favorite Flower to Add to the Bouquet:</label>
+        <br>
+        <input type="text" id="flower-input">
+        <br>
 
-        <!-- Gifs will Get Dumped Here -->
-        <div id="gifs-view"></div>
+        <input id="add-flower" type="submit" value="Submit">
+    </form>
+
+    <!-- Gifs will Get Dumped Here -->
+    <div id="gifs-view"></div>
 
     </div>
 

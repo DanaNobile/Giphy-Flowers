@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+} 
+
+
+
+
+.flower-btn{
+    background-color: rgb(145, 22, 22);
+    margin-right: 25px;
+    color: white;
+    border: none;
+    font-family: 'Bad Script';font-size: 25px;
+    text-align: center; 
+    margin-left: 3%;
+    
+}
+
+
+
+.giphy{
+    margin-top:0px;
+    background-color: rgb(145, 22, 22);
+ 
+    
+}
+
+
+
+
+/* The hero image- Resource: W3 Schools */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/poppyfield.jpg");
+  
+    /* Set a specific height */
+    height: 40%;
+    
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: left;
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    /* transform: translate(-50%, -50%); */
+    color: rgb(145, 22, 22);
+    font-family: 'Sofia';font-size: 22px;
+  }
