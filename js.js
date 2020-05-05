@@ -48,16 +48,27 @@ function displayFlowerGifs() {
                 // Creating a paragraph tag with the result item's rating
                 var p = $("<p>").text("Rating: " + results[i].rating);
 
+
+                var flowerStill = results[i].images.fixed_height_still.url;
+                var flowerPlay = results[i].images.fixed_height.url;
                 // Creating and storing an image tag
-                var flowerImage = $("<img>");
+                var flowerImage = $("<img>").addClass(".gif");
                 // Setting the src attribute of the image to a property pulled off the result item
+                flowerImage.attr("src", flowerStill);
+
+                flowerImage.attr("data-state", "still");
+                flowerImage.attr("data-animate", flowerPlay);
+                flowerImage.attr("data-still", flowerStill);
+
 
                 // this pulls an animated gif:
-                // flowerGif.attr("src", results[i].images.fixed_height.url);
-
+                // flowerImage.attr("src", results[i].images.fixed_height.url);
+                // flowerImage.attr("src", results[i].images.downsized.url);
                 // this pulls a still image:
-                flowerImage.attr("src", results[i].images.original_still.url);
+                // flowerImage.attr("src", results[i].images.original_still.url);
+                // flowerImage.attr("src", results[i].images.fixed_height_still.url);
 
+                // flowerImageAnimate.attr("src", results[i].images.fixed_height.url);
                 // Appending the paragraph and image tag to the flower Div
                 flowerDiv.append(p);
                 flowerDiv.append(flowerImage);
@@ -67,24 +78,25 @@ function displayFlowerGifs() {
                 $("#gifs-view").prepend(flowerDiv);
 
 
-
-
             }
-
-
 
 
         });
 };
 
 
-// function playGif() {
-//     $("<img>").on("click")
-//     // let flowerImage = ("src", results[i].images.fixed_height.url)
-//     // flowerImage.attr("src", results[i].images.fixed_height.url);
-//     console.log("clicked");
-// }
 
+$(document).on("click", ".gif", function () {
+    var gifStatus = $(this).attr("data-state");
+
+    if (gifStatus === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
 
 
 // Function for displaying flower array data as buttons
