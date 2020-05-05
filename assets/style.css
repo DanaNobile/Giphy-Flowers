@@ -1,8 +1,15 @@
 body, html {
     height: 100%;
+    /* background-image: url("/assets/images/grass2jpg.jpg"); */
 } 
 
 
+label{
+    font-family: 'Bad Script';font-size: 25px;
+    margin-top: 25px;
+    color: 145, 22, 22;
+    font-size: 30px;
+} 
 
 
 .flower-btn{
@@ -17,15 +24,18 @@ body, html {
 }
 
 
-
 .giphy{
     margin-top:0px;
     background-color: rgb(145, 22, 22);
- 
     
 }
 
-
+.container{
+    height: 100px;
+    /* display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row; */
+}
 
 
 /* The hero image- Resource: W3 Schools */
@@ -53,4 +63,11 @@ body, html {
     /* transform: translate(-50%, -50%); */
     color: rgb(145, 22, 22);
     font-family: 'Sofia';font-size: 22px;
+  }
+
+  #gifs-view{
+     
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
