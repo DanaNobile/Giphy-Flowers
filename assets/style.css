@@ -1,17 +1,22 @@
 body, html {
     height: 100%;
-    /* background-image:  url("/assets/images/grass2jpg.jpg"); */
+    background-image:  url("/assets/images/light\ wood.jpg");
+    /* background-image:  linear-gradient(rgba(15, 15, 15, 0.45), rgba(15, 15, 15, 0.899)), url("/assets/images/wood.jpg"); */
+    
+    
 } 
 
 h2{
-    font-family: 'Sofia';font-size: 50px;
+    font-family: 'Cherry Cream Soda';font-size: 50px;
 
 }
 
 label{
-    font-family: 'Sofia';font-size: 25px;
+    font-family: 'Cherry Cream Soda';font-size: 22px;
     margin-top: 25px;
-    color: rgb(145, 22, 22);
+    /* color: rgb(145, 22, 22); */
+    /* color: white; */
+    color: rgb(63, 18, 59);
     font-size: 40px;
 } 
 
@@ -21,34 +26,44 @@ p{
 }
 
 #flower-input{
-    border: 2px solid rgb(145, 22, 22);
+    border: 2px solid rgb(63, 18, 59);
+    margin-left: 3%;
 }
 
 #add-flower{
-    background: rgb(145, 22, 22);
+    background: rgb(63, 18, 59);
     font-family: 'Bad Script';
-    color: white;
+    color: white; 
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
+    margin-left: 3%; 
+    justify-content: center;
 }
 .flower-btn{
-    background-color: rgb(145, 22, 22);
+    background-color: rgb(63, 18, 59);
     margin-right: 25px;
     color: white;
     border: none;
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
     margin-left: 3%;
+    justify-content: center;
+  
+
     
 }
 
 
 .giphy{
     margin-top:0px;
-    background-color: rgb(145, 22, 22);
+    background-color: rgb(63, 18, 59);
     
 }
+
+
+
+
 
 .container{
     margin-left: 3%;
@@ -60,7 +75,7 @@ p{
 /* The hero image- Resource: W3 Schools */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/poppyfield.jpg");
+    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/sage.jpg");
   
     /* Set a specific height */
     height: 30%;
@@ -80,7 +95,7 @@ p{
     top: 15%;
     left: 3%;
     /* transform: translate(-50%, -50%); */
-    color: rgb(145, 22, 22);
+    color: rgb(63, 18, 59);
     font-family: 'Sofia';font-size: 22px;
   }
 

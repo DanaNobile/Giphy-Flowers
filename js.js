@@ -57,7 +57,8 @@ function displayFlowerGifs() {
                 // Setting the src attribute of the image to a property pulled off the result item
                 flowerImage.attr("src", flowerStill);
 
-                flowerImage.attr("data-state", "still");
+                // flowerImage.attr("data-state", "still");
+                flowerImage.attr("data-state", "still", "animate");
                 flowerImage.attr("data-animate", flowerPlay);
                 flowerImage.attr("data-still", flowerStill);
 
