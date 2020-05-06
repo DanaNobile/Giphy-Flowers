@@ -1,16 +1,9 @@
-/* body {
-    height: 100%; */
-    /* background-image:  url("/assets/images/light\ wood.jpg"); */
-    /* background-image:  linear-gradient(rgba(15, 15, 15, 0.45), rgba(15, 15, 15, 0.899)), url("/assets/images/wood.jpg"); */
-    /* background-image: url("/giphy-homework/assets/images/light\ wood.jpg"); */
-    /* background-repeat: no-repeat; */
-/* } */
 
 
 
     body, html { 
         height: 100%;
-        background: url("/giphy-homework/assets/images/light\ wood.jpg") no-repeat center center fixed; 
+        background: url("/assets/images/wood\ with\ plant.jpg") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -38,6 +31,10 @@ p{
     font-size: 15px;
 }
 
+
+.page-header{
+    margin-top: 150px;
+}
 #flower-input{
     border: 2px solid rgb(63, 18, 59);
     margin-left: 3%;
@@ -52,6 +49,7 @@ p{
     margin-top: 10px;
     margin-left: 3%; 
     justify-content: center;
+    
 }
 .flower-btn{
     background-color: rgb(63, 18, 59);
@@ -61,10 +59,7 @@ p{
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
     margin-left: 3%;
-    justify-content: center;
-  
-
-    
+    justify-content: center; 
 }
 
 
@@ -89,7 +84,7 @@ p{
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     /* background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/sage.jpg"); */
-    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/giphy-homework/assets/images/sage.jpg");
+    background-image: linear-gradient(rgba(250, 250, 250, 0.45), rgba(252, 252, 252, 0.45)), url("/assets/images/sage.jpg");
     /* Set a specific height */
     height: 30%;
     

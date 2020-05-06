@@ -26,7 +26,7 @@ var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 
 function displayFlowerGifs() {
     $("#gifs-view").empty();
-    // $("button").on("click", function () {
+
 
     var flower = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&limit=10&offset=0&rating=G&lang=en";
@@ -57,11 +57,10 @@ function displayFlowerGifs() {
                 // Setting the src attribute of the image to a property pulled off the result item
                 flowerImage.attr("src", flowerStill);
 
-                // flowerImage.attr("data-state", "still");
+                //this adds the still and animate attributes to the flowerImage
                 flowerImage.attr("data-state", "still", "animate");
                 flowerImage.attr("data-animate", flowerPlay);
                 flowerImage.attr("data-still", flowerStill);
-
 
 
                 // Appending the paragraph and image tag to the flower Div
@@ -71,30 +70,28 @@ function displayFlowerGifs() {
                 //displaying gifs
                 $("#gifs-view").prepend(flowerDiv);
 
-                // This function animates gifs on click 
+                // This function animates gifs on click - original that only animates some
 
-                $(".gif").on("click", function () {
+                $(flowerImage).on("click", function () {
                     console.log("clicked");
                     var gifStatus = $(this).attr("data-state");
 
                     if (gifStatus === "still") {
+                        console.log("start")
                         $(this).attr("src", $(this).attr("data-animate"));
                         $(this).attr("data-state", "animate");
-                    } else {
+
+                    } else if (gifStatus !== "still") {
+                        console.log("stop");
                         $(this).attr("src", $(this).attr("data-still"));
                         $(this).attr("data-state", "still");
                     }
                 });
             }
 
-
         });
 
-
 };
-
-
-
 
 
 // Function for displaying flower array data as buttons
@@ -119,7 +116,6 @@ $("#add-flower").on("click", function (event) {
     flowers.push(flower);
     displayButtons();
 });
-
 
 
 // This function adds event listener to click and displays gifs pertaining to button clicked
