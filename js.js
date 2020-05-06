@@ -120,6 +120,8 @@ $("#add-flower").on("click", function (event) {
     displayButtons();
 });
 
+
+
 // This function adds event listener to click and displays gifs pertaining to button clicked
 $(document).on("click", ".flower-btn", displayFlowerGifs);
 // $(document).on("click", "img", playGif);

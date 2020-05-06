@@ -1,7 +1,8 @@
 body, html {
     height: 100%;
-    background-image:  url("/assets/images/light\ wood.jpg");
+    /* background-image:  url("/assets/images/light\ wood.jpg"); */
     /* background-image:  linear-gradient(rgba(15, 15, 15, 0.45), rgba(15, 15, 15, 0.899)), url("/assets/images/wood.jpg"); */
+    background-image: url("/giphy-homework/assets/images/light\ wood.jpg");
     
     
 } 
@@ -75,8 +76,8 @@ p{
 /* The hero image- Resource: W3 Schools */
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/sage.jpg");
-  
+    /* background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/sage.jpg"); */
+    background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/giphy-homework/assets/images/sage.jpg");
     /* Set a specific height */
     height: 30%;
     
