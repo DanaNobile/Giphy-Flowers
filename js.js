@@ -106,15 +106,21 @@ function displayButtons() {
     }
 }
 
+// function resetSearch() {
+//     $("#flower-input).empty();
+// };
 
 // This function takes the input value and adds it to the existing array of flowers
 
+
 $("#add-flower").on("click", function (event) {
+
     event.preventDefault();
 
     var flower = $("#flower-input").val().trim();
     flowers.push(flower);
     displayButtons();
+
 });
 
 

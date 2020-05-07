@@ -9,12 +9,25 @@
         -o-background-size: cover;
         background-size: cover;
     }
-    
+h2{
+    display: flex;
+    justify-content: center;
+}    
 
 
 h2{
     font-family: 'Cherry Cream Soda';font-size: 50px;
+    
 
+}
+
+h3{
+    background-color: white;
+width: 350px;
+text-align: center;
+font-family: 'Cherry Cream Soda';
+color: rgb(63, 18, 59);
+height: 50px; 
 }
 
 label{
@@ -24,17 +37,42 @@ label{
     /* color: white; */
     color: rgb(63, 18, 59);
     font-size: 40px;
+    /* display:flex;
+    justify-content: center; */
 } 
+
 
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
+    color: rgb(63, 18, 59);
+    width: 85px;
+    height: 40px;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+  
+ 
 }
 
 
-.page-header{
-    margin-top: 150px;
+.top-border{
+
+ background-image: url("/assets/images/checker.jpg");
+ height: 50px;
+ display: flex; 
+ justify-content: center;
+ background-size: contain;
 }
+
+/* .top-border-seperator{
+
+height: 50px;
+} */
+
+
 #flower-input{
     border: 2px solid rgb(63, 18, 59);
     margin-left: 3%;
@@ -49,34 +87,48 @@ p{
     margin-top: 10px;
     margin-left: 3%; 
     justify-content: center;
+    border-radius: 25px;
+    width: 90px;
     
 }
 .flower-btn{
-    background-color: rgb(63, 18, 59);
+    /* background-color: rgb(202, 62, 191); */
     margin-right: 25px;
-    color: white;
-    border: none;
+    color: rgb(63, 18, 59)
+;    border: none;
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
     margin-left: 3%;
+    padding-left: 25px;
+    padding-right: 25px;
     justify-content: center; 
+
+
+    
+    /* width: 100%; */
 }
 
+.flower-btn:hover{
+    text-decoration: underline rgb(63, 18, 59);
+}
 
 .giphy{
     margin-top:0px;
-    background-color: rgb(63, 18, 59);
-    
+    background-color: white;
 }
 
-
-
-
-
+#buttons-view{
+    /* background-color: turquoise; */
+    display:flex;
+    justify-content: center;
+    height: 100px;
+}
 .container{
     margin-left: 3%;
     margin-top: 30px;
     margin-bottom: 100px;
+    
+   
 }
 
 
@@ -86,7 +138,7 @@ p{
     /* background-image: linear-gradient(rgba(238, 234, 234, 0.769), rgba(252, 252, 252, 0.413)), url("/assets/images/sage.jpg"); */
     background-image: linear-gradient(rgba(250, 250, 250, 0.45), rgba(252, 252, 252, 0.45)), url("/assets/images/sage.jpg");
     /* Set a specific height */
-    height: 30%;
+    height: 50%;
     
   
     /* Position and center the image to scale nicely on all screens */
@@ -94,26 +146,38 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    
   }
   
   /* Place text in the middle of the image */
   .hero-text {
-    text-align: left;
+    text-align: center;
     position: absolute;
     top: 15%;
-    left: 3%;
+    float: none;
+    /* left: 3%; */
+    justify-content: center;
+    width: 100%;
     /* transform: translate(-50%, -50%); */
     color: rgb(63, 18, 59);
     font-family: 'Sofia';font-size: 22px;
   }
 
+  /* #buttons-view{
+      width: 100%;
+      justify-content: center;
+  } */
+
   #gifs-view{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: fit-content;
-    max-height: fit-content;
+    /* max-width: fit-content; */
+    /* max-height: fit-content; */
     justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+   
   }
 
   
