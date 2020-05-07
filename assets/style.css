@@ -39,11 +39,11 @@ height: 50px;
 
 label{
     font-family: 'Cherry Cream Soda';font-size: 22px;
-    margin-top: 25px;
+    margin-top: 10px;
     /* color: rgb(145, 22, 22); */
     /* color: white; */
     color: rgb(63, 18, 59);
-    font-size: 40px;
+    font-size: 28px;
     /* display:flex;
     justify-content: center; */
 } 
@@ -87,10 +87,30 @@ height: 50px;
     height: 150px;
 }
 
+
+.container{
+   padding-top: 10px;
+   padding-bottom: auto;
+  text-align: center;
+  margin-top: 30px; 
+  background-image: url("/assets/images/checker.jpg");
+ height: 200px;
+ justify-content: center;
+ background-size: contain;
+
+}
+  
+    
+  
+
 #flower-input{
     border: 2px solid rgb(63, 18, 59);
     margin-left: 3%;
 }
+
+
+
+
 
 #add-flower{
     background: rgb(63, 18, 59);
@@ -136,13 +156,6 @@ height: 50px;
     display:flex;
     justify-content: center;
     height: 100px;
-}
-.container{
-    margin-left: 3%;
-    margin-top: 30px;
-    margin-bottom: 100px;
-    
-   
 }
 
 
