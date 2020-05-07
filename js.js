@@ -102,7 +102,7 @@ function displayButtons() {
         a.addClass("flower-btn");
         a.attr("data-name", flowers[i]);
         a.text(flowers[i]);
-        $("#buttons-view").append(a);
+        $("#buttons-view").prepend(a);
     }
 }
 
