@@ -119,8 +119,10 @@ flex-direction: row; */
 
 /* Search Form Styles:  */
 #girl{
-    width: 600px;
+    width: 600px; 
+    /* width: 100%; */
     height: 380px; 
+   
 }
 
 label{
@@ -170,13 +172,15 @@ h3{
     margin-top: 80px; 
     background-image: url("../assets/images/checker.jpg");    
     background-size: contain;
-    height: 380px;
+    height: 400px;
     justify-content: center;  
-    max-height: fit-content;
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    /* flex-direction: row; */
     margin-bottom: 75px;
+    border: 10px solid transparent;
+  padding: 0px;
+  
+
 }
 
   
