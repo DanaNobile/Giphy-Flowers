@@ -1,16 +1,32 @@
 
 
+/* .wrapper{
+ 
+    margin: 0 auto;
+    justify-content: center;
+    height: 100px;
+    display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   width: 100%;  
+   max-height: fit-content;
 
+} */
 body, html { 
     height: 100%;
     width: 100%;
-    
     background: url("../assets/images/wood\ with\ plant.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-}
+    background-size: cover; 
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}   
+
 
 
 p{
@@ -29,12 +45,14 @@ p{
 
 /* Page Header Styles:  */
 
+
+
 h1{
     margin-bottom: 0;
     display: flex;
     justify-content: center;
     text-align: center;
-}    
+}     
   
 h2{
     font-family: 'Cherry Cream Soda';font-size: 50px;
@@ -48,14 +66,17 @@ h2{
 .top-border{
  background-image: url("../assets/images/checker.jpg");
  height: 50px;
- display: flex; 
- justify-content: center;
+ /* display: flex;  */
+ /* justify-content: center; */
  background-size: contain;
  width: 100%;
- margin: 0;
- flex-wrap: wrap;
-flex-direction: row;
+ padding: auto;
+ margin: auto; 
+ /* flex-wrap: wrap;
+flex-direction: row; */
 }
+
+
 
 .hero-image {
     background-image: url("../assets/images/sage.jpg") ;
@@ -66,7 +87,11 @@ flex-direction: row;
     position: relative;
     display: flex;
     justify-content: center;    
-  }
+ margin: auto;
+  } 
+
+
+
   
   /* Place text in the middle of the image */
   .hero-text {
@@ -79,7 +104,7 @@ flex-direction: row;
     margin: 30px;
     width: 550px;
     height: 150px;
-  }
+  } 
 
 
 /* Flower Button Strip Styles:  */
@@ -107,6 +132,7 @@ flex-direction: row;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;  
+    max-height: fit-content;
  }
 
 
@@ -128,6 +154,20 @@ label{
     margin-top: 60px; 
   
 } 
+
+h4{
+    color: rgb(63, 18, 59);
+    font-family: 'Bad Script';font-size: 25px;
+    text-align: center; 
+    margin: auto;
+    /* margin-top: 2px; */
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.571);
+    width: 100%;
+    height: 45px;
+    padding-top: 8px;
+   
+}
 
 h3{
     color: rgb(63, 18, 59);
@@ -207,13 +247,14 @@ h3{
    /* max width 980px, 768px, 640px */
    @media screen and  (min-width: 400px) and (max-width: 500px){
 
-/* html{
+html{
  width: 100%;
     text-align: center;
     margin: auto;
     display: flex;
     justify-content: center;
-} */
+    position: absolute;
+} 
 
 label{
     padding-left: 20px;
@@ -224,7 +265,9 @@ label{
  
 }
 
-
+h4{
+    height: 70px;
+}
 
 .hero-text{
     max-width: 100%;
@@ -254,7 +297,4 @@ label{
 
    }
 
-    /* @media screen and (min-width: 641px) and (max-width: 768px){
-        margin-left: 15px;
-
-        @media screen and (max-width: 640px){ */
+   
