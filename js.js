@@ -15,6 +15,10 @@
 // Have buttons link to GIPHY search
 // Have GIPHY search resuts appear on screen
 
+$(function () {
+    $("#gifs-view").hide();
+
+});
 
 // this is my personal giphy api key
 let APIKEY = "AO19ApHDYRwaLBR55kjmQCddKIcDrAKy";
@@ -26,6 +30,7 @@ var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 
 function displayFlowerGifs() {
     $("#gifs-view").empty();
+    $("#gifs-view").show();
 
 
     var flower = $(this).attr("data-name");
