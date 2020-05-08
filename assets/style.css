@@ -227,6 +227,7 @@ h3{
 
    /* max width 980px, 768px, 640px */
    @media screen and  (min-width: 360px) and (max-width: 500px){
+   /* Header  */
     .hero-text{
         flex-direction: column;
         margin: 0;
@@ -242,7 +243,7 @@ h3{
 font-size: 30px;
     }
 
-
+/* Flower Buttons & Instructions */
 #buttons-view{
     height: 250px;
     max-height: fit-content; 
@@ -259,10 +260,27 @@ h4{
     padding-right: 15px;
 }
 
+/* Form */
 .form-content{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+label{
+    font-size: 22px;
+}
+
+h3{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
 #gifs-view{
     padding-left: 15px;
     padding-right: 15px;
