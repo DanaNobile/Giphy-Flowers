@@ -228,14 +228,9 @@ h3{
    /* max width 980px, 768px, 640px */
    @media screen and  (min-width: 360px) and (max-width: 500px){
     .hero-text{
-        max-width: 100%;
-        /* display: flex;  */
         flex-direction: column;
-        /* justify-content: center;  */
         margin: 0;
         padding-top: 35px;
-       
-     
     }
 
     h1{
@@ -247,18 +242,17 @@ h3{
 font-size: 30px;
     }
 
-label{
-  
- 
+
+#buttons-view{
+    height: 250px;
+    max-height: fit-content; 
 }
+/* ask TA about this one */
 
 h4{
     height: 70px;
+   
 }
-
-
-
-
 
 .form-content{
     display: flex;
