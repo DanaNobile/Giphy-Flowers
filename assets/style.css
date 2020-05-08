@@ -246,6 +246,7 @@ font-size: 30px;
 #buttons-view{
     height: 250px;
     max-height: fit-content; 
+    padding-bottom: 15px;
 }
 /* ask TA about this one */
 
