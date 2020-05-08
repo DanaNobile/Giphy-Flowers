@@ -1,20 +1,6 @@
 
-
-/* .wrapper{
- 
-    margin: 0 auto;
-    justify-content: center;
-    height: 100px;
-    display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-   width: 100%;  
-   max-height: fit-content;
-
-} */
 body, html { 
-    height: 100%;
-    width: 100%;
+  
     background: url("../assets/images/wood\ with\ plant.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -26,8 +12,6 @@ body, html {
     padding: 0px;
     overflow-x: hidden; 
 }   
-
-
 
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -42,10 +26,7 @@ p{
     font-weight: bold;
 }
 
-
 /* Page Header Styles:  */
-
-
 
 h1{
     margin-bottom: 0;
@@ -245,23 +226,29 @@ h3{
   }
 
    /* max width 980px, 768px, 640px */
-   @media screen and  (min-width: 400px) and (max-width: 500px){
+   @media screen and  (min-width: 360px) and (max-width: 500px){
+    .hero-text{
+        max-width: 100%;
+        /* display: flex;  */
+        flex-direction: column;
+        /* justify-content: center;  */
+        margin: 0;
+        padding-top: 35px;
+       
+     
+    }
 
-html{
- width: 100%;
-    text-align: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-} 
+    h1{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    h2{
+font-size: 30px;
+    }
 
 label{
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 80px;
-    font-size: 25px;
-    
+  
  
 }
 
@@ -269,19 +256,9 @@ h4{
     height: 70px;
 }
 
-.hero-text{
-    max-width: 100%;
-    display: flex; 
-    justify-content: center; 
-    margin: auto;
- 
-}
 
-.hero-image{
-    max-width: 100%;
-    margin: auto;
 
-}
+
 
 .form-content{
     display: flex;
