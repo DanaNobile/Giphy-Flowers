@@ -1,6 +1,5 @@
 
 body, html { 
-  
     background: url("../assets/images/wood\ with\ plant.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -47,17 +46,11 @@ h2{
 .top-border{
  background-image: url("../assets/images/checker.jpg");
  height: 50px;
- /* display: flex;  */
- /* justify-content: center; */
  background-size: contain;
  width: 100%;
  padding: auto;
  margin: auto; 
- /* flex-wrap: wrap;
-flex-direction: row; */
 }
-
-
 
 .hero-image {
     background-image: url("../assets/images/sage.jpg") ;
@@ -68,12 +61,9 @@ flex-direction: row; */
     position: relative;
     display: flex;
     justify-content: center;    
- margin: auto;
+    margin: auto;
   } 
 
-
-
-  
   /* Place text in the middle of the image */
   .hero-text {
     text-align: center;
@@ -108,7 +98,7 @@ flex-direction: row; */
  #buttons-view{
      background-color: white;
      justify-content: center;
-     height: 100px;
+     min-height: 100px;
      display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -126,9 +116,7 @@ flex-direction: row; */
     border-bottom: solid 10px;
     border-left: solid 10px;
     border-image: url("../assets/images/checker.jpg") 30 round; 
-    background-size: contain;
-
-   
+    background-size: contain; 
 }
 
 label{
@@ -141,7 +129,6 @@ label{
     width: 100%;
     margin-bottom: 35px;
     margin-top: 60px; 
-  
 } 
 
 h4{
@@ -149,7 +136,6 @@ h4{
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
     margin: auto;
-    /* margin-top: 2px; */
     margin-bottom: 15px;
     background-color: rgba(255, 255, 255, 0.571);
     width: 100%;
@@ -185,9 +171,7 @@ h3{
     height: 400px;
     justify-content: center;  
     display: flex;
-    /* flex-direction: row; */
     margin-bottom: 75px;
-  
 }
 
   
@@ -251,28 +235,28 @@ h3{
     }
 
     h2{
-font-size: 30px;
+    font-size: 30px;
     }
 
 /* Flower Buttons & Instructions */
-#buttons-view{
-    height: 250px;
-    max-height: fit-content; 
+    #buttons-view{
+    /* height: 250px; */
+    /* max-height: fit-content;  */
     padding-bottom: 15px;
-}
+    }   
 /* ask TA about this one */
 
-h4{
+    h4{
     height: 70px;
     margin-top: 10px;
     margin-left: 0;
     margin-right: 0;
     padding-left: 15px;
     padding-right: 15px;
-}
+    }
 
 /* Form */
-.form-content{
+    .form-content{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -280,26 +264,31 @@ h4{
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
-    border-bottom: none;
-}
+    border-top: none;
+    border-bottom: solid 10px;
+    border-image: url("../assets/images/checker.jpg") 30 round; 
+    background-size: contain;
+    margin-bottom: 150px;
+    }
 
-label{
+    label{
     font-size: 22px;
-}
+    }
 
-h3{
+    h3{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 18px;
-}
+    }
 
-#gifs-view{
+    #gifs-view{
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
-}
+    margin-top: 220px;
+    }
 
    }
 

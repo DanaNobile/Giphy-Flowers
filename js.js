@@ -15,9 +15,9 @@
 // Have buttons link to GIPHY search
 // Have GIPHY search resuts appear on screen
 
+// this hides empty GIFY box on page load
 $(function () {
     $("#gifs-view").hide();
-
 });
 
 // this is my personal giphy api key
@@ -29,11 +29,11 @@ var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 // below function not complete. need to look at query url formatting and get gifs to dispaly differently for each click- somehow work in on click event
 
 function displayFlowerGifs() {
+    // this empties and fills GIF box based on functions below
     $("#gifs-view").empty();
     $("#gifs-view").show();
-    // $("#flower-input").empty();
 
-
+    // this uses the Giphy API and flower search for displaying GIFs dynamkically 
     var flower = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + flower + "&api_key=AO19ApHDYRwaLBR55kjmQCddKIcDrAKy&limit=10&offset=0&rating=G&lang=en";
 
@@ -46,21 +46,21 @@ function displayFlowerGifs() {
             console.log(response);
             var results = response.data;
 
-            // Looping through each result item
+            // looping through each result item
             for (var i = 0; i < results.length; i++) {
 
-                // Creating and storing a div tag
+                // creating and storing a div tag
                 var flowerDiv = $("<div>");
 
-                // Creating a paragraph tag with the result item's rating
+                // creating a paragraph tag with the result item's rating
                 var p = $("<p>").text("Rating: " + results[i].rating);
 
 
                 var flowerStill = results[i].images.fixed_height_still.url;
                 var flowerPlay = results[i].images.fixed_height.url;
-                // Creating and storing an image tag
+                // creating and storing an image tag
                 var flowerImage = $("<img>").addClass("gif");
-                // Setting the src attribute of the image to a property pulled off the result item
+                // setting the src attribute of the image to a property pulled off the result item
                 flowerImage.attr("src", flowerStill);
 
                 //this adds the still and animate attributes to the flowerImage
@@ -69,15 +69,14 @@ function displayFlowerGifs() {
                 flowerImage.attr("data-still", flowerStill);
 
 
-                // Appending the paragraph and image tag to the flower Div
+                // appending the paragraph and image tag to the flower Div
                 flowerDiv.append(p);
                 flowerDiv.append(flowerImage);
 
                 //displaying gifs
                 $("#gifs-view").prepend(flowerDiv);
 
-                // This function animates gifs on click - original that only animates some
-
+                // this function animates gifs on click - original that only animates some
                 $(flowerImage).on("click", function () {
                     console.log("clicked");
                     var gifStatus = $(this).attr("data-state");
@@ -96,30 +95,26 @@ function displayFlowerGifs() {
             }
 
         });
-
 };
 
 
 // Function for displaying flower array data as buttons
 function displayButtons() {
     $("#buttons-view").empty();
-    // $("#flower-input").empty();
     for (var i = 0; i < flowers.length; i++) {
         var a = $("<button>");
         a.addClass("flower-btn");
         a.attr("data-name", flowers[i]);
         a.text(flowers[i]);
         $("#buttons-view").prepend(a);
-
     }
 }
 
-// function resetSearch() {
-//     $("#flower-input).empty();
-// };
+function resetSearch() {
+    $("#flower-input").val("");
+};
 
-// This function takes the input value and adds it to the existing array of flowers
-
+// this function takes the input value and adds it to the existing array of flowers
 
 $("#add-flower").on("click", function (event) {
 
@@ -127,28 +122,16 @@ $("#add-flower").on("click", function (event) {
 
     var flower = $("#flower-input").val().trim();
     flowers.push(flower);
-    // $("#flower-input").empty();
     displayButtons();
-
+    resetSearch();
 
 });
 
 
 
-// // testing
-// function emptySearch() {
-//     $("#flower-input").on("click", function empty();
-
-// };
-
-// function emptySearch() {
-//     $("#flower-input").empty();
-
-// };
-
-// This function adds event listener to click and displays gifs pertaining to button clicked
+// this function adds event listener to click and displays gifs pertaining to button clicked
 $(document).on("click", ".flower-btn", displayFlowerGifs);
-// $(document).on("click", "img", playGif);
 
 
+// this displays the flower buttons 
 displayButtons();
