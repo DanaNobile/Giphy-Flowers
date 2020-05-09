@@ -122,6 +122,12 @@ flex-direction: row; */
     width: 600px; 
     /* width: 100%; */
     height: 380px; 
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-left: solid 10px;
+    border-image: url("../assets/images/checker.jpg") 30 round; 
+    background-size: contain;
+
    
 }
 
@@ -164,23 +170,24 @@ h3{
     background-color: white;
     height: 380px;
     width: 100%;
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-right: solid 10px;
+    border-image: url("../assets/images/checker.jpg") 30 round; 
+    background-size: contain;
 }
 
 .container-full{
     margin: auto;
     width: 100%;
-    margin-top: 80px; 
-    background-image: url("../assets/images/checker.jpg");    
+    margin-top: 80px;   
     background-size: contain;
     height: 400px;
     justify-content: center;  
     display: flex;
     /* flex-direction: row; */
     margin-bottom: 75px;
-    border: 10px solid transparent;
-  padding: 0px;
   
-
 }
 
   
@@ -273,6 +280,7 @@ h4{
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
+    border-bottom: none;
 }
 
 label{
