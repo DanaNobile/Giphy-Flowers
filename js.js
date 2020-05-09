@@ -30,7 +30,8 @@ var flowers = ["Rose", "Daisies", "Orchid", "Sunflower", "Tulip", "Peony"];
 
 function displayFlowerGifs() {
     $("#gifs-view").empty();
-    $("#gifs-view").show()
+    $("#gifs-view").show();
+    // $("#flower-input").empty();
 
 
     var flower = $(this).attr("data-name");
@@ -102,12 +103,14 @@ function displayFlowerGifs() {
 // Function for displaying flower array data as buttons
 function displayButtons() {
     $("#buttons-view").empty();
+    // $("#flower-input").empty();
     for (var i = 0; i < flowers.length; i++) {
         var a = $("<button>");
         a.addClass("flower-btn");
         a.attr("data-name", flowers[i]);
         a.text(flowers[i]);
         $("#buttons-view").prepend(a);
+
     }
 }
 
@@ -127,6 +130,7 @@ $("#add-flower").on("click", function (event) {
     // $("#flower-input").empty();
     displayButtons();
 
+
 });
 
 
@@ -137,8 +141,10 @@ $("#add-flower").on("click", function (event) {
 
 // };
 
+// function emptySearch() {
+//     $("#flower-input").empty();
 
-
+// };
 
 // This function adds event listener to click and displays gifs pertaining to button clicked
 $(document).on("click", ".flower-btn", displayFlowerGifs);
