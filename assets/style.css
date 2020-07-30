@@ -12,7 +12,7 @@ body, html {
     overflow-x: hidden; 
 }   
 
-p{
+p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     color: rgb(63, 18, 59);
@@ -25,9 +25,9 @@ p{
     font-weight: bold;
 }
 
-/* Page Header Styles:  */
+/* Page Header  */
 
-h1{
+h1 {
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@ h2{
     margin: auto;
 }
 
-.top-border{
+.top-border {
  background-image: url("../assets/images/checker.jpg");
  height: 50px;
  background-size: contain;
@@ -62,10 +62,10 @@ h2{
     display: flex;
     justify-content: center;    
     margin: auto;
-  } 
+} 
 
   /* Place text in the middle of the image */
-  .hero-text {
+.hero-text {
     text-align: center;
     position: absolute; 
     top: 20%;
@@ -75,11 +75,11 @@ h2{
     margin: 30px;
     width: 550px;
     height: 150px;
-  } 
+} 
 
 
 /* Flower Button Strip Styles:  */
-.flower-btn{
+.flower-btn {
     background-color: white;
     margin-right: 25px;
     color: rgb(63, 18, 59);
@@ -89,28 +89,26 @@ h2{
     padding-left: 25px;
     padding-right: 25px;
     max-height: fit-content;
- }
+}
  
  .flower-btn:hover{
      text-decoration: underline rgb(63, 18, 59);
- }
+}
  
  #buttons-view{
-     background-color: white;
-     justify-content: center;
-     min-height: 100px;
-     display: flex;
+    background-color: white;
+    justify-content: center;
+    min-height: 100px;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;  
     max-height: fit-content;
- }
-
+}
 
 /* Search Form Styles:  */
-#girl{
+#girl {
     width: 600px; 
-    /* width: 100%; */
     height: 380px; 
     border-top: solid 10px;
     border-bottom: solid 10px;
@@ -119,7 +117,7 @@ h2{
     background-size: contain; 
 }
 
-label{
+label {
     font-family: 'Cherry Cream Soda';font-size: 22px;
     color: rgb(63, 18, 59);
     font-size: 28px;
@@ -131,7 +129,7 @@ label{
     margin-top: 60px; 
 } 
 
-h4{
+h4 {
     color: rgb(63, 18, 59);
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
@@ -140,11 +138,10 @@ h4{
     background-color: rgba(255, 255, 255, 0.571);
     width: 100%;
     height: 45px;
-    padding-top: 8px;
-   
+    padding-top: 8px; 
 }
 
-h3{
+h3 {
     color: rgb(63, 18, 59);
     font-family: 'Bad Script';font-size: 25px;
     text-align: center; 
@@ -152,7 +149,7 @@ h3{
     margin-bottom: 15px;
 }
 
-.form-content{
+.form-content {
     background-color: white;
     height: 380px;
     width: 100%;
@@ -163,7 +160,7 @@ h3{
     background-size: contain;
 }
 
-.container-full{
+.container-full {
     margin: auto;
     width: 100%;
     margin-top: 80px;   
@@ -173,16 +170,15 @@ h3{
     display: flex;
     margin-bottom: 75px;
 }
-
-  
-#flower-input{
+ 
+#flower-input {
     border: 2px solid rgb(63, 18, 59);
     width: 10;
     margin: auto;
     margin-bottom: 15px; 
 }
 
-#add-flower{
+#add-flower {
     background: rgb(63, 18, 59);
     font-family: 'Bad Script';
     color: white; 
@@ -195,16 +191,14 @@ h3{
     width: 90px;  
 }
 
-
-
 /* Gif Display Styles:  */
-.container-gifs{
+.container-gifs {
     display: flex;
     justify-content: center;
     margin: auto;
 }
 
-#gifs-view{
+#gifs-view {
     display: flex;
     background-color: rgba(250, 250, 250, 0.584);
     flex-wrap: wrap;
@@ -216,47 +210,45 @@ h3{
     margin-bottom: 150px;
 }
 
-  .gif{
-      border: 5px solid rgba(93, 163, 96, 0.434);
-  }
+.gif {
+    border: 5px solid rgba(93, 163, 96, 0.434);
+}
 
-   /* max width 980px, 768px, 640px */
-   @media screen and  (min-width: 360px) and (max-width: 500px){
+/* max width 980px, 768px, 640px */
+@media screen and  (min-width: 360px) and (max-width: 500px){
    /* Header  */
-    .hero-text{
-        flex-direction: column;
-        margin: 0;
-        padding-top: 35px;
-    }
+.hero-text {
+    flex-direction: column;
+    margin: 0;
+    padding-top: 35px;
+}
 
-    h1{
-        font-size: 20px;
-        margin-bottom: 5px;
-    }
+h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
 
-    h2{
+h2 {
     font-size: 30px;
-    }
+}
 
 /* Flower Buttons & Instructions */
-    #buttons-view{
-    /* height: 250px; */
-    /* max-height: fit-content;  */
-    padding-bottom: 15px;
-    }   
-/* ask TA about this one */
+#buttons-view {
 
-    h4{
+    padding-bottom: 15px;
+}   
+
+h4 {
     height: 70px;
     margin-top: 10px;
     margin-left: 0;
     margin-right: 0;
     padding-left: 15px;
     padding-right: 15px;
-    }
+}
 
 /* Form */
-    .form-content{
+.form-content {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -269,27 +261,27 @@ h3{
     border-image: url("../assets/images/checker.jpg") 30 round; 
     background-size: contain;
     margin-bottom: 150px;
-    }
+}
 
-    label{
+label {
     font-size: 22px;
-    }
+}
 
-    h3{
+h3 {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 18px;
-    }
+}
 
-    #gifs-view{
+#gifs-view{
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 220px;
-    }
+}
 
-   }
+}
 
    

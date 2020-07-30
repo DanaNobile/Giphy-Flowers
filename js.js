@@ -1,21 +1,5 @@
-// Create an array of flowers
-// Create and empty div for buttons
-// Create a for loop of flowers
-// Push flowers into buttons on page
 
-
-// Create search box
-// Connect search box to GIPHY search
-// Have searches create new buttons and stay on screen
-
-
-// Add GIPHY API Key
-// Get response of key
-// Create event listener for buttons
-// Have buttons link to GIPHY search
-// Have GIPHY search resuts appear on screen
-
-// this hides empty GIFY box on page load
+// This hides empty GIFY box on page load
 $(function () {
     $("#gifs-view").hide();
 });
@@ -55,7 +39,6 @@ function displayFlowerGifs() {
                 // creating a paragraph tag with the result item's rating
                 var p = $("<p>").text("Rating: " + results[i].rating);
 
-
                 var flowerStill = results[i].images.fixed_height_still.url;
                 var flowerPlay = results[i].images.fixed_height.url;
                 // creating and storing an image tag
@@ -67,7 +50,6 @@ function displayFlowerGifs() {
                 flowerImage.attr("data-state", "still", "animate");
                 flowerImage.attr("data-animate", flowerPlay);
                 flowerImage.attr("data-still", flowerStill);
-
 
                 // appending the paragraph and image tag to the flower Div
                 flowerDiv.append(p);
@@ -115,7 +97,6 @@ function resetSearch() {
 };
 
 // this function takes the input value and adds it to the existing array of flowers
-
 $("#add-flower").on("click", function (event) {
 
     event.preventDefault();
@@ -127,11 +108,8 @@ $("#add-flower").on("click", function (event) {
 
 });
 
-
-
 // this function adds event listener to click and displays gifs pertaining to button clicked
 $(document).on("click", ".flower-btn", displayFlowerGifs);
-
 
 // this displays the flower buttons 
 displayButtons();
