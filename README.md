@@ -1,5 +1,5 @@
 # giphy-homework
-https://dananobile.github.io/giphy-homework/
+https://dananobile.github.io/Giphy-Flowers/
 
 Giftastic is a dynamic page using Giphy's API to produce GIFs based on the users actions.
 The theme is flowers- a few types of flowers are in an array and pushed to a search bar. Users can click the flower name and GIFS will be displayed.
